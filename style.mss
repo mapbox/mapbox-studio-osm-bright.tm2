@@ -48,6 +48,8 @@ Map {
 
 #water {
   polygon-fill: @water - #111;
+  // Map tiles are 256 pixels by 256 pixels wide, so the height 
+  // and width of tiling pattern images must be factors of 256. 
   polygon-pattern-file: url(pattern/wave.png);
   [zoom<=5] {
     // Below zoom level 5 we use Natural Earth data for water,
