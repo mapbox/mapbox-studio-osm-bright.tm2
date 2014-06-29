@@ -102,6 +102,8 @@ Map {
     // Landuse classes look better as a transparent overlay.
     opacity: 0.1;
     [class='wood'] { polygon-fill: #6a4; polygon-gamma: 0.5; }
+    [class='pitch'] {polygon-fill: #3eff20; polygon-gamma: 0.99; }
+
   }
 }
 
