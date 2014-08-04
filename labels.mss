@@ -128,7 +128,7 @@
   // to use shaves a bit off the final project.xml size
   [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],
   [ldir='NE'],[ldir='SE'],[ldir='SW'],[ldir='NW'] {
-    shield-file: url("img/dot-small.png");
+    shield-file: url("shield/dot-small.png");
     shield-unlock-image: true;
     shield-name: @name;
     shield-size: 14;
@@ -251,10 +251,10 @@
   shield-fill: #765;
   shield-min-distance: 60;
   shield-size: 9;
-  shield-file: url('img/motorway_sm_[reflen].png');
+  shield-file: url('shield/motorway_sm_[reflen].png');
   [zoom>=15] {
     shield-size: 11;
-    shield-file: url('img/motorway_lg_[reflen].png');
+    shield-file: url('shield/motorway_lg_[reflen].png');
   }
 }
 
