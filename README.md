@@ -1,3 +1,3 @@
-# OSM Bright for TM2
+# OSM Bright for Mapbox Studio
 
-A reboot of [OSM Bright](https://github.com/mapbox/osm-bright) powered by [MapBox vector tiles](http://www.mapbox.com/blog/vector-tiles/) and [TM2](https://github.com/mapbox/tm2).
+A full-featured template / example project for Mapbox Studio using Mapbox Streets vector tiles.
