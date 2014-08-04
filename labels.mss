@@ -293,3 +293,16 @@
     text-halo-radius: 1.5;
   }
 }
+
+
+// ---------------------------------------------------------------------
+// House numbers
+
+#housenum_label[zoom>=18] {
+  text-name: [house_num];
+  text-face-name: @sans_it;
+  text-fill: #cba;
+  text-size: 8;
+  [zoom=19] { text-size: 10; }
+  [zoom>=20] { text-size: 12; }
+}
