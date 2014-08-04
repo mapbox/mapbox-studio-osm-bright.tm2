@@ -27,15 +27,16 @@ Map {
   }
   // Countries
   [admin_level=2] {
-    line-width: 1.4;
+    line-width: 0.8;
     line-cap: round;
+    [zoom>=4] { line-width: 1.2; }
     [zoom>=6] { line-width: 2; }
     [zoom>=8] { line-width: 4; }
     [disputed=1] { line-dasharray: 4,4; }
   }
   // States / Provices / Subregions
   [admin_level>=3] {
-    line-width: 0.4;
+    line-width: 0.3;
     line-dasharray: 10,3,3,3;
     [zoom>=6] { line-width: 1; }
     [zoom>=8] { line-width: 1.5; }

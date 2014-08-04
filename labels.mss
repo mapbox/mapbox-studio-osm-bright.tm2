@@ -49,12 +49,12 @@
   text-halo-rasterizer: fast;
   text-line-spacing: -4;
   text-character-spacing: 0.5;
-  text-size: 11;
+  text-size: 10;
   [zoom>=3][scalerank=1],
   [zoom>=4][scalerank=2],
   [zoom>=5][scalerank=3],
   [zoom>=6][scalerank>3] {
-    text-size: 13;
+    text-size: 12;
   }
   [zoom>=4][scalerank=1],
   [zoom>=5][scalerank=2],
@@ -67,8 +67,8 @@
 #country_label_line {
   // Lines that connect offset labels to small
   // island & coastal countries at small scales.
-  line-color: #334;
-  line-opacity: 0.5;
+  line-color: #fff;
+  line-dasharray: 3,1;
 }
 
 // ---------------------------------------------------------------------
@@ -97,20 +97,12 @@
     text-character-spacing:	4;
     text-line-spacing:	8;
   }
-  [labelrank=2] {
-    text-size: 14;
-  }
-  [labelrank=3] {
-    text-size: 11;
-  }
+  [labelrank=2] { text-size: 14; }
+  [labelrank=3] { text-size: 11; }
   [zoom>=5] {
     text-size: 12;
-    [labelrank=1] {
-      text-size: 22;
-     }
-    [labelrank=2] {
-      text-size: 16;
-     }
+    [labelrank=1] { text-size: 22; }
+    [labelrank=2] { text-size: 16; }
     [labelrank=3] {
       text-size: 14;
       text-character-spacing: 2;
@@ -131,7 +123,8 @@
     shield-file: url("shield/dot-small.png");
     shield-unlock-image: true;
     shield-name: @name;
-    shield-size: 14;
+    shield-size: 12;
+    [zoom=7] { shield-size: 14; }
     shield-face-name: @sans;
     shield-placement: point;
     shield-fill: #333;
@@ -250,6 +243,7 @@
   shield-face-name: @sans_bd;
   shield-fill: #765;
   shield-min-distance: 60;
+  shield-min-padding: 8;  // prevents clipped shields at tile edges
   shield-size: 9;
   shield-file: url('shield/motorway_sm_[reflen].png');
   [zoom>=15] {
@@ -259,10 +253,7 @@
 }
 
 #road_label {
-  // You need to use [name] for road labels if you want English street
-  // prefixes and suffixes to be abbreviated. Translated labels do not
-  // have abbreviations.
-  text-name: [name];
+  text-name: @name;
   text-placement: line;  // text follows line path
   text-face-name: @sans;
   text-fill: #765;
@@ -270,6 +261,7 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 12;
+  text-avoid-edges: true;  // prevents clipped labels at tile edges
   [zoom>=15] { text-size: 13; }
 }
 
