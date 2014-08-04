@@ -123,34 +123,33 @@
 
 // City labels with dots for low zoom levels.
 // The separate attachment keeps the size of the XML down.
-#place_label::citydots[type='city'][zoom>=4][zoom<=7] {
+#place_label::citydots[type='city'][zoom>=4][zoom<=7][localrank<=3] {
   // explicitly defining all the `ldir` values wer'e going
   // to use shaves a bit off the final project.xml size
   [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],
   [ldir='NE'],[ldir='SE'],[ldir='SW'],[ldir='NW'] {
-    text-name: @name;
-    text-size: 14;
-    text-face-name: @sans;
-    text-placement: point;
-    text-fill: #333;
-    text-halo-fill: fadeout(#fff, 50%);
-    text-halo-radius: 1;
-    text-halo-rasterizer: fast;
-    text-min-distance: 2;
-    [ldir='E'] { text-dx: 5; }
-    [ldir='W'] { text-dx: -5; }
-    [ldir='N'] { text-dy: -5; }
-    [ldir='S'] { text-dy: 5; }
-    [ldir='NE'] { text-dx: 4; text-dy: -4; }
-    [ldir='SE'] { text-dx: 4; text-dy: 4; }
-    [ldir='SW'] { text-dx: -4; text-dy: 4; }
-    [ldir='NW'] { text-dx: -4; text-dy: -4; }
-    marker-width: 4;
-    marker-fill: #333;
+    shield-file: url("img/dot-small.png");
+    shield-unlock-image: true;
+    shield-name: @name;
+    shield-size: 14;
+    shield-face-name: @sans;
+    shield-placement: point;
+    shield-fill: #333;
+    shield-halo-fill: fadeout(#fff, 50%);
+    shield-halo-radius: 1;
+    shield-halo-rasterizer: fast;
+    [ldir='E'] { shield-text-dx: 5; }
+    [ldir='W'] { shield-text-dx: -5; }
+    [ldir='N'] { shield-text-dy: -5; }
+    [ldir='S'] { shield-text-dy: 5; }
+    [ldir='NE'] { shield-text-dx: 4; shield-text-dy: -4; }
+    [ldir='SE'] { shield-text-dx: 4; shield-text-dy: 4; }
+    [ldir='SW'] { shield-text-dx: -4; shield-text-dy: 4; }
+    [ldir='NW'] { shield-text-dx: -4; shield-text-dy: -4; }
   }
 }
 
-#place_label {
+#place_label[zoom>=8][localrank<=3] {
   text-name: @name;
   text-face-name: @sans;
   text-wrap-width: 120;
