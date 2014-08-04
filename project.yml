@@ -20,7 +20,7 @@ layers: null
 maxzoom: 22
 minzoom: 0
 name: OSM Bright 2
-source: "mapbox:///mapbox.mapbox-streets-v4"
+source: "mapbox:///mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss

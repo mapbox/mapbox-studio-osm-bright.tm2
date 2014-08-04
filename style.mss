@@ -73,17 +73,19 @@ Map {
   line-color: @water * 0.9;
   line-cap: round;
   line-width: 0.5;
-  [type='river'] {
+  [class='river'] {
     [zoom>=12] { line-width: 1; }
     [zoom>=14] { line-width: 2; }
     [zoom>=16] { line-width: 3; }
   }
-  [type='stream'],
-  [type='canal'] {
+  [class='stream'],
+  [class='stream_intermittent'],
+  [class='canal'] {
     [zoom>=14] { line-width: 1; }
     [zoom>=16] { line-width: 2; }
     [zoom>=18] { line-width: 3; }
   }
+  [class='stream_intermittent'] { line-dasharray: 6,2,2,2; }
 }
 
 // ---------------------------------------------------------------------
