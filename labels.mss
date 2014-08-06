@@ -50,6 +50,7 @@
   text-line-spacing: -4;
   text-character-spacing: 0.5;
   text-size: 11;
+  comp-op: overlay; 
   [zoom>=3][scalerank=1],
   [zoom>=4][scalerank=2],
   [zoom>=5][scalerank=3],
