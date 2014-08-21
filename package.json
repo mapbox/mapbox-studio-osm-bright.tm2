@@ -1,6 +1,6 @@
 {
     "name": "osm-bright",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A full-featured template / example project for Mapbox Studio using Mapbox Streets vector tiles.",
     "main": "./package.json"
 }
