@@ -10,6 +10,9 @@
 @land: #f8f4f0;
 @water: #a0c8f0;
 
+@state_text:        #765;
+@state_halo:        @place_halo;
+
 Map {
   background-color:@land;
 }
@@ -34,13 +37,40 @@ Map {
     [zoom>=8] { line-width: 4; }
     [disputed=1] { line-dasharray: 4,4; }
   }
+}
   // States / Provices / Subregions
-  [admin_level>=3] {
-    line-width: 0.3;
-    line-dasharray: 10,3,3,3;
-    [zoom>=6] { line-width: 1; }
-    [zoom>=8] { line-width: 1.5; }
-    [zoom>=12] { line-width: 2; }
+#state_label[zoom>=4][zoom<=10] {
+  text-name: [abbr];
+  text-face-name: @sans_lt;
+  text-placement: point;
+  text-fill: @state_text;
+  text-halo-fill: fadeout(lighten(@land,5%),50%);
+  text-halo-radius: 1;
+  text-halo-rasterizer: fast;
+  text-size: 9;
+  [zoom>=5][area>100000],
+  [zoom>=6][area>50000],
+  [zoom>=7][area>10000],
+  [zoom>=8][area<=10000] {
+    text-name: @name;
+  }
+  [zoom>=5][zoom<=6] {
+    [area>10000] { text-size: 12; }
+    [area>50000] { text-size: 14; }
+    text-wrap-width: 40;
+  }
+  [zoom>=7][zoom<=8] {
+    text-size: 14;
+    [area>50000] { text-size: 16; text-character-spacing: 1; }
+    [area>100000] { text-size: 18; text-character-spacing: 3; }
+    text-wrap-width: 60;
+  }
+  [zoom>=9][zoom<=10] {
+    text-halo-radius: 2;
+    text-size: 16;
+    text-character-spacing: 2;
+    [area>50000] { text-size: 18; text-character-spacing: 2; }
+    text-wrap-width: 100;
   }
 }
 

@@ -30,6 +30,7 @@
 @sans_bd: 'Open Sans Bold', @fallback;
 @sans_it: 'Open Sans Italic', @fallback;
 @sans_lt_italic: 'Open Sans Light Italic', @fallback;
+@sans_lt: 'Open Sans Light', @fallback;
 
 @place_halo:        #fff;
 @country_text:      @land * 0.2;
