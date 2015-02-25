@@ -31,6 +31,10 @@
 @sans_it: 'Open Sans Italic', @fallback;
 @sans_lt_italic: 'Open Sans Light Italic', @fallback;
 
+@place_halo:        #fff;
+@country_text:      @land * 0.2;
+@country_halo:      @place_halo;
+
 
 // ---------------------------------------------------------------------
 // Countries
@@ -38,39 +42,61 @@
 // The country labels in MapBox Streets vector tiles are placed by hand,
 // optimizing the arrangement to fit as many as possible in densely-
 // labeled areas.
-#country_label[zoom>=3] {
+#country_label[zoom>=2][zoom<=10] {
   text-name: @name;
   text-face-name: @sans_bd;
-  text-transform: uppercase;
-  text-wrap-width: 100;
-  text-wrap-before: true;
-  text-fill: #334;
-  text-halo-fill: fadeout(#fff,80%);
-  text-halo-radius: 2;
+  [zoom=2] { text-face-name: @sans; }
+  text-placement: point;
+  text-size: 9;
+  text-fill: @country_text;
+  text-halo-fill: @country_halo;
+  text-halo-radius: 1;
   text-halo-rasterizer: fast;
-  text-line-spacing: -4;
-  text-character-spacing: 0.5;
-  text-size: 10;
-  [zoom>=3][scalerank=1],
-  [zoom>=4][scalerank=2],
-  [zoom>=5][scalerank=3],
-  [zoom>=6][scalerank>3] {
-    text-size: 12;
+  text-wrap-width: 20;
+  text-wrap-before: true;
+  text-line-spacing: -3;
+  [scalerank=1] {
+    [zoom=3]  { text-size: 12; text-wrap-width: 60; }
+    [zoom=4]  { text-size: 14; text-wrap-width: 90; }
+    [zoom=5]  { text-size: 20; text-wrap-width: 120; }
+    [zoom>=6] { text-size: 20; text-wrap-width: 120; }
   }
-  [zoom>=4][scalerank=1],
-  [zoom>=5][scalerank=2],
-  [zoom>=6][scalerank=3],
-  [zoom>=7][scalerank>3] {
-    text-size: 15;
+  [scalerank=2] {
+    [zoom=2]  { text-name: [code]; }
+    [zoom=3]  { text-size: 11; }
+    [zoom=4]  { text-size: 13; }
+    [zoom=5]  { text-size: 17; }
+    [zoom>=6] { text-size: 20; }
+  }
+  [scalerank=3] {
+    [zoom=3]  { text-name: [code]; }
+    [zoom=4]  { text-size: 11; }
+    [zoom=5]  { text-size: 15; }
+    [zoom=6]  { text-size: 17; }
+    [zoom=7]  { text-size: 18; text-wrap-width: 60; }
+    [zoom>=8] { text-size: 20; text-wrap-width: 120; }
+  }
+  [scalerank=4] {
+    [zoom=5] { text-size: 13; }
+    [zoom=6] { text-size: 15; text-wrap-width: 60  }
+    [zoom=7] { text-size: 16; text-wrap-width: 90; }
+    [zoom=8] { text-size: 18; text-wrap-width: 120; }
+    [zoom>=9] { text-size: 20; text-wrap-width: 120; }
+  }
+  [scalerank=5] {
+    [zoom=5] { text-size: 11; }
+    [zoom=6] { text-size: 13; }
+    [zoom=7] { text-size: 14; text-wrap-width: 60; }
+    [zoom=8] { text-size: 16; text-wrap-width: 90; }
+    [zoom>=9] { text-size: 18; text-wrap-width: 120; }
+  }
+  [scalerank>=6] {
+    [zoom=7] { text-size: 12; }
+    [zoom=8] { text-size: 14; }
+    [zoom>=9] { text-size: 16; }
   }
 }
 
-#country_label_line {
-  // Lines that connect offset labels to small
-  // island & coastal countries at small scales.
-  line-color: #fff;
-  line-dasharray: 3,1;
-}
 
 // ---------------------------------------------------------------------
 // Marine
@@ -129,7 +155,7 @@
   // to use shaves a bit off the final project.xml size
   [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],
   [ldir='NE'],[ldir='SE'],[ldir='SW'],[ldir='NW'] {
-    shield-file: url("shield/dot-small.png");
+    shield-file: url("shield/dot.svg");
     shield-unlock-image: true;
     shield-name: @name;
     shield-size: 12;
