@@ -21,13 +21,11 @@
 // Fonts
 
 // All fontsets should have a good fallback that covers as many glyphs
-// as possible. 'Arial Unicode MS Regular' and 'Arial Unicode MS Bold' 
-//are recommended as final fallbacks if you have them available. 
-//They support all the characters used in the MapBox Streets vector tiles.
-@fallback: 'Open Sans Regular';
+// as possible.
+@fallback: 'Arial Unicode MS Regular';
 @sans: 'Open Sans Regular', @fallback;
 @sans_md: 'Open Sans Semibold', @fallback;
-@sans_bd: 'Open Sans Bold', @fallback;
+@sans_bd: 'Open Sans Bold', 'Arial Unicode MS Bold', @fallback;
 @sans_it: 'Open Sans Italic', @fallback;
 @sans_lt_italic: 'Open Sans Light Italic', @fallback;
 @sans_lt: 'Open Sans Light', @fallback;
