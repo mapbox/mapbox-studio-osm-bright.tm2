@@ -10,9 +10,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 0
-  - 20
-  - 2
+  - -118.2518
+  - 34.0442
+  - 15
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
@@ -20,7 +20,7 @@ layers: null
 maxzoom: 22
 minzoom: 0
 name: OSM Bright 2
-source: "mapbox:///mapbox.mapbox-streets-v5"
+source: "mapbox:///mapbox.mapbox-streets-v6"
 styles: 
   - style.mss
   - road.mss

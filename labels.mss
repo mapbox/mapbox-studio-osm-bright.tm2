@@ -29,6 +29,12 @@
 @sans_md: 'Open Sans Semibold', @fallback;
 @sans_bd: 'Open Sans Bold', @fallback;
 @sans_it: 'Open Sans Italic', @fallback;
+@sans_lt_italic: 'Open Sans Light Italic', @fallback;
+@sans_lt: 'Open Sans Light', @fallback;
+
+@place_halo:        #fff;
+@country_text:      @land * 0.2;
+@country_halo:      @place_halo;
 
 
 // ---------------------------------------------------------------------
@@ -37,77 +43,107 @@
 // The country labels in MapBox Streets vector tiles are placed by hand,
 // optimizing the arrangement to fit as many as possible in densely-
 // labeled areas.
-#country_label[zoom>=3] {
+#country_label[zoom>=2][zoom<=10] {
   text-name: @name;
   text-face-name: @sans_bd;
-  text-transform: uppercase;
-  text-wrap-width: 100;
-  text-wrap-before: true;
-  text-fill: #334;
-  text-halo-fill: fadeout(#fff,80%);
-  text-halo-radius: 2;
+  [zoom=2] { text-face-name: @sans; }
+  text-placement: point;
+  text-size: 9;
+  text-fill: @country_text;
+  text-halo-fill: @country_halo;
+  text-halo-radius: 1;
   text-halo-rasterizer: fast;
-  text-line-spacing: -4;
-  text-character-spacing: 0.5;
-  text-size: 10;
-  [zoom>=3][scalerank=1],
-  [zoom>=4][scalerank=2],
-  [zoom>=5][scalerank=3],
-  [zoom>=6][scalerank>3] {
-    text-size: 12;
+  text-wrap-width: 20;
+  text-wrap-before: true;
+  text-line-spacing: -3;
+  [scalerank=1] {
+    [zoom=3]  { text-size: 12; text-wrap-width: 60; }
+    [zoom=4]  { text-size: 14; text-wrap-width: 90; }
+    [zoom=5]  { text-size: 20; text-wrap-width: 120; }
+    [zoom>=6] { text-size: 20; text-wrap-width: 120; }
   }
-  [zoom>=4][scalerank=1],
-  [zoom>=5][scalerank=2],
-  [zoom>=6][scalerank=3],
-  [zoom>=7][scalerank>3] {
-    text-size: 15;
+  [scalerank=2] {
+    [zoom=2]  { text-name: [code]; }
+    [zoom=3]  { text-size: 11; }
+    [zoom=4]  { text-size: 13; }
+    [zoom=5]  { text-size: 17; }
+    [zoom>=6] { text-size: 20; }
+  }
+  [scalerank=3] {
+    [zoom=3]  { text-name: [code]; }
+    [zoom=4]  { text-size: 11; }
+    [zoom=5]  { text-size: 15; }
+    [zoom=6]  { text-size: 17; }
+    [zoom=7]  { text-size: 18; text-wrap-width: 60; }
+    [zoom>=8] { text-size: 20; text-wrap-width: 120; }
+  }
+  [scalerank=4] {
+    [zoom=5] { text-size: 13; }
+    [zoom=6] { text-size: 15; text-wrap-width: 60  }
+    [zoom=7] { text-size: 16; text-wrap-width: 90; }
+    [zoom=8] { text-size: 18; text-wrap-width: 120; }
+    [zoom>=9] { text-size: 20; text-wrap-width: 120; }
+  }
+  [scalerank=5] {
+    [zoom=5] { text-size: 11; }
+    [zoom=6] { text-size: 13; }
+    [zoom=7] { text-size: 14; text-wrap-width: 60; }
+    [zoom=8] { text-size: 16; text-wrap-width: 90; }
+    [zoom>=9] { text-size: 18; text-wrap-width: 120; }
+  }
+  [scalerank>=6] {
+    [zoom=7] { text-size: 12; }
+    [zoom=8] { text-size: 14; }
+    [zoom>=9] { text-size: 16; }
   }
 }
 
-#country_label_line {
-  // Lines that connect offset labels to small
-  // island & coastal countries at small scales.
-  line-color: #fff;
-  line-dasharray: 3,1;
-}
 
 // ---------------------------------------------------------------------
 // Marine
 
-#marine_label {
+#marine_label[zoom>=2]["mapnik::geometry_type"=1],
+#marine_label[zoom>=2]["mapnik::geometry_type"=2] {
   text-name: @name;
-  text-face-name: @sans_it;
-  text-wrap-width: 60;
-  text-wrap-before: true;
-  text-fill: darken(@water, 10);
-  text-halo-fill: fadeout(#fff, 75%);
-  text-halo-radius: 1.5;
-  text-size: 10;
-  text-character-spacing: 1;
-  // Some marine labels should be drawn along a line 
-  // rather than on a point (the default)
-  [placement='line'] {
+  text-face-name: @sans_lt_italic;
+  text-fill: lighten(@water,20);
+  ["mapnik::geometry_type"=1] {
+    text-placement: point;
+    text-wrap-width: 30;
+  }
+  ["mapnik::geometry_type"=2] {
     text-placement: line;
-    text-avoid-edges: true;
   }
-  // Oceans
-  [labelrank=1] { 
-    text-size: 18;
-    text-wrap-width: 120;
-    text-character-spacing:	4;
-    text-line-spacing:	8;
+  [labelrank=1][zoom>=2],
+  [labelrank=2][zoom>=3],
+  [labelrank=3][zoom>=4],
+  [labelrank=4][zoom>=5],
+  [labelrank=5][zoom>=6],
+  [labelrank=6][zoom>=7] {
+    text-size: 13;
+    text-character-spacing: 1;
   }
-  [labelrank=2] { text-size: 14; }
-  [labelrank=3] { text-size: 11; }
-  [zoom>=5] {
-    text-size: 12;
-    [labelrank=1] { text-size: 22; }
-    [labelrank=2] { text-size: 16; }
-    [labelrank=3] {
-      text-size: 14;
-      text-character-spacing: 2;
-     }
-   }
+  [labelrank=1][zoom>=3],
+  [labelrank=2][zoom>=4],
+  [labelrank=3][zoom>=5],
+  [labelrank=4][zoom>=6],
+  [labelrank=5][zoom>=7],
+  [labelrank=6][zoom>=8] {
+    text-size: 16;
+    text-character-spacing: 2;
+  }
+  [labelrank=1][zoom>=4],
+  [labelrank=2][zoom>=5],
+  [labelrank=3][zoom>=6] {
+    text-size: 20;
+    text-character-spacing: 4;
+  }
+  [labelrank=1][zoom>=5],
+  [labelrank=2][zoom>=6],
+  [labelrank=3][zoom>=7] {
+    text-size: 24;
+    text-character-spacing: 8;
+  }
 }
 
 // ---------------------------------------------------------------------
@@ -115,12 +151,12 @@
 
 // City labels with dots for low zoom levels.
 // The separate attachment keeps the size of the XML down.
-#place_label::citydots[type='city'][zoom>=4][zoom<=7][localrank<=3] {
+#place_label::citydots[type='city'][zoom>=4][zoom<=7][localrank=1] {
   // explicitly defining all the `ldir` values wer'e going
   // to use shaves a bit off the final project.xml size
   [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],
   [ldir='NE'],[ldir='SE'],[ldir='SW'],[ldir='NW'] {
-    shield-file: url("shield/dot-small.png");
+    shield-file: url("shield/dot.svg");
     shield-unlock-image: true;
     shield-name: @name;
     shield-size: 12;
@@ -142,7 +178,7 @@
   }
 }
 
-#place_label[zoom>=8][localrank<=3] {
+#place_label[zoom>=8][localrank=1] {
   text-name: @name;
   text-face-name: @sans;
   text-wrap-width: 120;
@@ -234,22 +270,30 @@
 // ---------------------------------------------------------------------
 // Roads
 
-#road_label[reflen>=1][reflen<=6]::shield {
-  // Motorways with a 'ref' tag that is 1-6 characters long have a
-  // [ref] value for shield-style labels.
-  // Custom shield png files can be created using make_shields.sh
-  // in _src folder
-  shield-name: [ref];
-  shield-face-name: @sans_bd;
-  shield-fill: #765;
-  shield-min-distance: 60;
-  shield-min-padding: 8;  // prevents clipped shields at tile edges
+#road_label::shield-pt[class='motorway'][zoom>=7][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-pt[class='motorway'][zoom>=9][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-ln[zoom>=11][reflen<=6] {
+  shield-name: "[ref].replace('·', '\n')";
   shield-size: 9;
-  shield-file: url('shield/motorway_sm_[reflen].png');
-  [zoom>=15] {
+  shield-line-spacing: -4;
+  shield-file: url('shield/[shield]-[reflen].svg');
+  shield-face-name: @sans;
+  shield-fill: #333;
+  [zoom>=14] {
+    shield-transform: scale(1.25,1.25);
     shield-size: 11;
-    shield-file: url('shield/motorway_lg_[reflen].png');
   }
+}
+#road_label::shield-pt[class='motorway'][zoom>=7][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-pt[class='motorway'][zoom>=9][zoom<=10][localrank=1][reflen<=6] {
+  shield-placement: point;
+  shield-avoid-edges: false;
+}
+#road_label::shield-ln[zoom>=11][reflen<=6] {
+  shield-placement: line;
+  shield-spacing: 400;
+  shield-min-distance: 100;
+  shield-avoid-edges: true;
 }
 
 #road_label {
