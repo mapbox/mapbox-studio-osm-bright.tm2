@@ -95,6 +95,7 @@ Map {
     polygon-fill: #f0f0ff;
     comp-op: soft-light;
     image-filters: agg-stack-blur(1,1);
+    image-filters-inflate: true;
     polygon-geometry-transform: translate(0,1);
     polygon-clip: false;
   }
