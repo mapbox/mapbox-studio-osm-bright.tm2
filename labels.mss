@@ -14,7 +14,7 @@
 // - French: '[name_fr]'
 // - Spanish: '[name_es]'
 // - German: '[name_de]'
-@name: '[name]';
+@name: '[name_en]';
 
 
 // ---------------------------------------------------------------------
@@ -339,3 +339,4 @@
   [zoom=19] { text-size: 10; }
   [zoom>=20] { text-size: 12; }
 }
+
