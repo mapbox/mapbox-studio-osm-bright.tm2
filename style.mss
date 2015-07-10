@@ -77,7 +77,7 @@ Map {
 // ---------------------------------------------------------------------
 // Water Features 
 
-#water, #watershp {
+#water {
   polygon-fill: @water - #111;
   // Map tiles are 256 pixels by 256 pixels wide, so the height 
   // and width of tiling pattern images must be factors of 256. 
