@@ -20,7 +20,7 @@ layers: null
 maxzoom: 17
 minzoom: 0
 name: OSM Bright 2
-source: "tmsource:///home/yurik/wmf/kartotherian/map/osm-bright.tm2source"
+source: "tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source"
 styles: 
   - style.mss
   - road.mss
