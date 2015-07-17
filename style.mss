@@ -37,6 +37,15 @@ Map {
     [zoom>=8] { line-width: 4; }
     [disputed=1] { line-dasharray: 4,4; }
   }
+  
+  // States / Provices / Subregions
+  [admin_level>=3] {
+    line-width: 0.3;
+    line-dasharray: 10, 10;
+    [zoom>=6] { line-width: 1; }
+    [zoom>=8] { line-width: 1.5; }
+    [zoom>=12] { line-width: 2; }
+  }
 }
   // States / Provices / Subregions
 #state_label[zoom>=4][zoom<=10] {
