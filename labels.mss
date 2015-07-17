@@ -282,12 +282,12 @@
     shield-size: 11;
   }
 }
-#road_label::shield-pt[class='motorway'][zoom>=7][zoom<=10][localrank=1][reflen<=6],
-#road_label::shield-pt[class='motorway'][zoom>=9][zoom<=10][localrank=1][reflen<=6] {
+#road_label::shield-pt[class='motorway'][zoom>=7][zoom<=10][localrank=1][reflen>0][reflen<=6],
+#road_label::shield-pt[class='motorway'][zoom>=9][zoom<=10][localrank=1][reflen>0][reflen<=6] {
   shield-placement: point;
   shield-avoid-edges: false;
 }
-#road_label::shield-ln[zoom>=11][reflen<=6] {
+#road_label::shield-ln[zoom>=11][reflen>0][reflen<=6] {
   shield-placement: line;
   shield-spacing: 400;
   shield-min-distance: 100;
