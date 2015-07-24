@@ -16,19 +16,18 @@
 // - German: '[name_de]'
 @name: '[name_en]';
 
-
 // ---------------------------------------------------------------------
 // Fonts
 
 // All fontsets should have a good fallback that covers as many glyphs
 // as possible.
-@fallback: 'Arial Unicode MS Regular';
-@sans: 'Open Sans Regular', @fallback;
-@sans_md: 'Open Sans Semibold', @fallback;
-@sans_bd: 'Open Sans Bold', 'Arial Unicode MS Bold', @fallback;
-@sans_it: 'Open Sans Italic', @fallback;
-@sans_lt_italic: 'Open Sans Light Italic', @fallback;
-@sans_lt: 'Open Sans Light', @fallback;
+
+@sans: @regular;
+@sans_md: @regular;
+@sans_bd: @bold;
+@sans_it: @italic;
+@sans_lt_italic: @italic;
+@sans_lt: @regular;
 
 @place_halo:        #fff;
 @country_text:      @land * 0.2;
@@ -43,7 +42,7 @@
 // labeled areas.
 #country_label[zoom>=2][zoom<=10] {
   text-name: @name;
-  text-face-name: @sans_bd;
+  text-face-name: @bold;
   [zoom=2] { text-face-name: @sans; }
   text-placement: point;
   text-size: 9;

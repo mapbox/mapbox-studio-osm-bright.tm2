@@ -1,10 +1,13 @@
 {
     "name": "osm-bright-style",
     "version": "2.1.1",
-    "description": "A full-featured template / example project for Mapbox Studio using Mapbox Streets vector tiles.",
+    "description": "A CartoCSS skin for Kartotherian tile service",
     "main": "./package.json",
-	"repository": {
-	  "type": "git",
-	  "url": "git://github.com/nyurik/osm-bright.tm2.git"
-	}
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/nyurik/osm-bright.tm2.git"
+    },
+    "dependencies": {
+        "osm-bright-fonts": "git+https://github.com/nyurik/osm-bright.fonts.git"
+    }
 }
