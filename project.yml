@@ -10,14 +10,14 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -122.4074
-  - 37.7829
-  - 14
+  - 112.7637
+  - 12.2971
+  - 5
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 17
+maxzoom: 18
 minzoom: 0
 name: OSM Bright 2
 source: "tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source"
@@ -25,4 +25,5 @@ styles:
   - style.mss
   - road.mss
   - labels.mss
+  - fonts.mss
 template: ''
