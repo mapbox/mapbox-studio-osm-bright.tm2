@@ -14,7 +14,7 @@ dir = os.path.abspath(os.path.dirname(os.path.dirname(inspect.getfile(inspect.cu
 
 def getFonts():
     res = {}
-    output = check_output('/usr/local/bin/otfinfo -i ' +  dir + 'fonts/*.?tf', shell=True).splitlines()
+    output = check_output('/usr/local/bin/otfinfo -i ' +  dir + 'node_modules/osm-bright-fonts/fonts/*.?tf', shell=True).splitlines()
     for line in output:
         if ':Full name:' not in line: continue
         file, dummy, name = line.split(':')
