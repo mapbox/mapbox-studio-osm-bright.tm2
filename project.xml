@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">112.7637,12.2971,5</Parameter>
+  <Parameter name="center">-122.8299,37.7137,10</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">18</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -62,6 +62,7 @@
   <Font face-name="Noto Sans Tamil Regular"/>
   <Font face-name="Noto Sans Thai Regular"/>
   <Font face-name="Noto Sans Tibetan Regular"/>
+  <Font face-name="Noto Sans Tifinagh Regular"/>
 </FontSet>
 <FontSet name="fontset-1">
   <Font face-name="Noto Naskh Arabic Regular"/>
@@ -90,6 +91,7 @@
   <Font face-name="Noto Sans Tamil Regular"/>
   <Font face-name="Noto Sans Thai Regular"/>
   <Font face-name="Noto Sans Tibetan Regular"/>
+  <Font face-name="Noto Sans Tifinagh Regular"/>
 </FontSet>
 <Style name="landuse-overlay" filter-mode="first" opacity="0.1">
   <Rule>
