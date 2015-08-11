@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-122.8299,37.7137,10</Parameter>
+  <Parameter name="center">-122.4286,37.7935,14</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">18</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -1674,19 +1674,19 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'city')</Filter>
-    <TextSymbolizer size="24" wrap-width="180" fontset-name="fontset-1" wrap-before="true" fill="#333333" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="20" wrap-width="180" fontset-name="fontset-1" wrap-before="true" fill="#333333" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'city')</Filter>
-    <TextSymbolizer size="18" wrap-width="140" fontset-name="fontset-1" wrap-before="true" fill="#333333" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="16" wrap-width="140" fontset-name="fontset-1" wrap-before="true" fill="#333333" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>750000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'city')</Filter>
-    <TextSymbolizer fontset-name="fontset-1" size="16" wrap-width="120" wrap-before="true" fill="#333333" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer fontset-name="fontset-1" size="14" wrap-width="120" wrap-before="true" fill="#333333" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -1708,13 +1708,13 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'suburb')</Filter>
-    <TextSymbolizer size="11" fill="#663333" fontset-name="fontset-0" text-transform="uppercase" character-spacing="0.5" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="11" fill="#663333" fontset-name="fontset-0" text-transform="uppercase" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'suburb')</Filter>
-    <TextSymbolizer fill="#663333" fontset-name="fontset-0" text-transform="uppercase" character-spacing="0.5" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="10" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer fill="#663333" fontset-name="fontset-0" text-transform="uppercase" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="10" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -1731,13 +1731,13 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="11" fill="#663333" fontset-name="fontset-0" text-transform="uppercase" character-spacing="0.5" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="11" fill="#663333" fontset-name="fontset-0" text-transform="uppercase" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer fill="#663333" fontset-name="fontset-0" text-transform="uppercase" character-spacing="0.5" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="10" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer fill="#663333" fontset-name="fontset-0" text-transform="uppercase" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="10" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -1754,13 +1754,13 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'hamlet')</Filter>
-    <TextSymbolizer size="11" fill="#663333" fontset-name="fontset-0" text-transform="uppercase" character-spacing="0.5" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer size="11" fill="#663333" fontset-name="fontset-0" text-transform="uppercase" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([localrank] = 1) and ([type] = 'hamlet')</Filter>
-    <TextSymbolizer fill="#663333" fontset-name="fontset-0" text-transform="uppercase" character-spacing="0.5" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="10" ><![CDATA[[name_en]]]></TextSymbolizer>
+    <TextSymbolizer fill="#663333" fontset-name="fontset-0" text-transform="uppercase" wrap-width="120" wrap-before="true" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="1" halo-rasterizer="fast" size="10" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>

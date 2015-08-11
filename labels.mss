@@ -187,13 +187,13 @@
   text-size: 10;
   [type='city'][zoom>=8][zoom<=15] {
   	text-face-name: @sans_md;
-    text-size: 16;
+    text-size: 14;
     [zoom>=10] { 
-      text-size: 18;
+      text-size: 16;
       text-wrap-width: 140;
     }
     [zoom>=12] { 
-      text-size: 24;
+      text-size: 20;
       text-wrap-width: 180;
     }
     // Hide at largest scales:
@@ -219,7 +219,7 @@
     text-fill: #633;
     text-face-name:	@sans_bd;
     text-transform: uppercase;
-    text-character-spacing: 0.5;
+    //text-character-spacing: 0.5;
     [zoom>=14] { text-size: 11; }
     [zoom>=15] { text-size: 12; text-character-spacing: 1; }
     [zoom>=16] { text-size: 14; text-character-spacing: 2; }
