@@ -178,7 +178,7 @@
 #place_label[zoom>=8][localrank=1] {
   text-name: @name;
   text-face-name: @sans;
-  text-wrap-width: 120;
+  text-wrap-width: 100;
   text-wrap-before: true;
   text-fill: #333;
   text-halo-fill: fadeout(#fff, 50%);
@@ -190,11 +190,11 @@
     text-size: 14;
     [zoom>=10] { 
       text-size: 16;
-      text-wrap-width: 140;
+      text-wrap-width: 110;
     }
     [zoom>=12] { 
       text-size: 20;
-      text-wrap-width: 180;
+      text-wrap-width: 120;
     }
     // Hide at largest scales:
     [zoom>=16] { text-name: "''"; }
@@ -221,8 +221,8 @@
     text-transform: uppercase;
     //text-character-spacing: 0.5;
     [zoom>=14] { text-size: 11; }
-    [zoom>=15] { text-size: 12; text-character-spacing: 1; }
-    [zoom>=16] { text-size: 14; text-character-spacing: 2; }
+    [zoom>=15] { text-size: 12; text-character-spacing: 0.5; }
+    [zoom>=16] { text-size: 14; text-character-spacing: 1; }
   }
 }
 
