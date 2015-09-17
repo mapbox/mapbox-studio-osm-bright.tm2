@@ -1,31 +1,40 @@
 # OSM Bright for Kartotherian
 
-A fork of Mapbox's style of the same name, intended for [Kartotherian](https://github.com/kartotherian). [osm-bright.tm2source](https://github.com/kartotherian/osm-bright.tm2) is the corresponding datasource, vanilla Mapbox vector tiles aren't fully supported.
+A fork of Mapbox's style of the same name, intended for [Kartotherian](https://github.com/kartotherian). This style relies on the [osm-bright.tm2source](https://github.com/kartotherian/osm-bright.tm2) datasource. Vanilla Mapbox vector tiles are not fully supported.
 
-# Using this style
+# Viewing/Editing this style
 
 Clone it:
 
-```git clone git@github.com:kartotherian/osm-bright.tm2.git```
+```
+git clone https://github.com/kartotherian/osm-bright.tm2.git
+```
 
-The font dependencies for it are in a separate repository, managed via [NPM](https://www.npmjs.com/):
+If you have node.js's [NPM](https://www.npmjs.com/), use it to download fonts from the [fonts repository](https://github.com/kartotherian/osm-bright.fonts).
 
 ```
 cd osm-bright.tm2
 npm install
 ```
 
-Unfortunately, to open this style in Mapbox Studio you need to edit it to point it to the right location of [datasource](https://github.com/kartotherian/osm-bright.tm2) on your machine:
+Otherwise, you can do it manually:
 
-In project.xml, replace with your path:
-```<Parameter name="source"><![CDATA[tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source]]></Parameter>```
+```
+# Don't do this if you used "npm install" above
+cd osm-bright.tm2
+git clone https://github.com/kartotherian/osm-bright.fonts.git node_modules/osm-bright-fonts
+```
 
-In project.yml:
-```source: "tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source"```
+Before opening this style in Mapbox Studio, you might need to first manually point to the right datasource.  Open `project.yml` in any text editor, and change the source value (make sure there are no spaces in front)
 
-Relative paths are not supported:(
+```
+source: "https://maps.wikimedia.org/osm/pbfinfo.json"
+```
 
-# Changing this style
-Although user directly modifies only *.mss and project.yml, project.xml is wat gets fed to Mapnik so it has to be kept in sync. Mapbox Studio does it for you so if you had to change something otside of it, just load the style in the Studio, make a null edit to affected file and save the project.
+Alternativelly, if you have Postgres with (partial) OSM database on your machine, and use want to edit the [datasource itself](https://github.com/kartotherian/osm-bright.tm2source), install it and set the source to its location (relative paths are not supported)
 
-You can easily edit this style using the tiles hosted on maps.wikimedia.org - load mapbox studio, open the style, click "Layers", change source, and enter https://maps.wikimedia.org/osm/pbfinfo.json as the source.  The link will show an error if clicked from this site due to the referer header, but will work from the studio.  Note that Mapbox Studio 2.7 has a bug that prevents this, but the custom built by Mapbox is  [available here](https://github.com/mapbox/mapbox-studio/issues/1268#issuecomment-135673871), and it should be fixed in the future versions.
+```
+source: "tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source"
+```
+
+Install [Mapbox Studio](https://www.mapbox.com/mapbox-studio) (version 0.2.8 or later), click "Styles & Sources" in the bottom left, browse to the style dir.  Remember that style changes only show after you click "Save".
