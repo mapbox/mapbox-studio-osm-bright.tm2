@@ -41,7 +41,7 @@ Map {
   // States / Provices / Subregions
   [admin_level>=3] {
     line-width: 0.3;
-    line-dasharray: 10, 10;
+    line-dasharray: 10,3,3,3;
     [zoom>=6] { line-width: 1; }
     [zoom>=8] { line-width: 1.5; }
     [zoom>=12] { line-width: 2; }

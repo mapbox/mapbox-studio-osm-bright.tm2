@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">34.7662,32.0713,15</Parameter>
+  <Parameter name="center">34.7491,32.0749,13</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">18</Parameter>
   <Parameter name="minzoom">0</Parameter>
@@ -1296,46 +1296,46 @@
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <Filter>([admin_level] &gt;= 3) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="2" stroke-dasharray="10, 10" stroke="#a0c8f0" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="2" stroke-dasharray="10, 3, 3, 3" stroke="#a0c8f0" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([admin_level] &gt;= 3) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="1.5" stroke-dasharray="10, 10" stroke="#a0c8f0" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="1.5" stroke-dasharray="10, 3, 3, 3" stroke="#a0c8f0" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
     <Filter>([admin_level] &gt;= 3) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="1" stroke-dasharray="10, 10" stroke="#a0c8f0" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="1" stroke-dasharray="10, 3, 3, 3" stroke="#a0c8f0" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MinScaleDenominator>12500000</MinScaleDenominator>
     <Filter>([admin_level] &gt;= 3) and ([maritime] = 1)</Filter>
-    <LineSymbolizer stroke-width="0.3" stroke-dasharray="10, 10" stroke="#a0c8f0" stroke-linejoin="round" />
+    <LineSymbolizer stroke-width="0.3" stroke-dasharray="10, 3, 3, 3" stroke="#a0c8f0" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <Filter>([admin_level] &gt;= 3)</Filter>
-    <LineSymbolizer stroke-width="2" stroke-dasharray="10, 10" stroke-linejoin="round" stroke="#444466" />
+    <LineSymbolizer stroke-width="2" stroke-dasharray="10, 3, 3, 3" stroke-linejoin="round" stroke="#444466" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([admin_level] &gt;= 3)</Filter>
-    <LineSymbolizer stroke-width="1.5" stroke-dasharray="10, 10" stroke-linejoin="round" stroke="#444466" />
+    <LineSymbolizer stroke-width="1.5" stroke-dasharray="10, 3, 3, 3" stroke-linejoin="round" stroke="#444466" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500000</MaxScaleDenominator>
     <MinScaleDenominator>3000000</MinScaleDenominator>
     <Filter>([admin_level] &gt;= 3)</Filter>
-    <LineSymbolizer stroke-width="1" stroke-dasharray="10, 10" stroke-linejoin="round" stroke="#444466" />
+    <LineSymbolizer stroke-width="1" stroke-dasharray="10, 3, 3, 3" stroke-linejoin="round" stroke="#444466" />
   </Rule>
   <Rule>
     <MinScaleDenominator>12500000</MinScaleDenominator>
     <Filter>([admin_level] &gt;= 3)</Filter>
-    <LineSymbolizer stroke-width="0.3" stroke-dasharray="10, 10" stroke-linejoin="round" stroke="#444466" />
+    <LineSymbolizer stroke-width="0.3" stroke-dasharray="10, 3, 3, 3" stroke-linejoin="round" stroke="#444466" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
