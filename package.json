@@ -5,9 +5,9 @@
     "main": "./package.json",
     "repository": {
         "type": "git",
-        "url": "git://github.com/nyurik/osm-bright.tm2.git"
+        "url": "git://github.com/kartotherian/osm-bright.tm2.git"
     },
     "dependencies": {
-        "osm-bright-fonts": "git+https://github.com/nyurik/osm-bright.fonts.git"
+        "osm-bright-fonts": "git+https://github.com/kartotherian/osm-bright.fonts.git"
     }
 }

@@ -10,9 +10,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 34.7763
-  - 32.0787
-  - 16
+  - 34.7662
+  - 32.0713
+  - 15
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
@@ -20,7 +20,7 @@ layers: null
 maxzoom: 18
 minzoom: 0
 name: OSM Bright 2
-source: "tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source"
+source: "https://maps.wikimedia.org/osm/pbfinfo.json"
 styles: 
   - style.mss
   - road.mss
