@@ -263,6 +263,8 @@
     //text-character-spacing:	0.25;
     // POI labels with an icon need to be offset:
     [maki!=null] { text-dy: 10; }
+    // Reduce clutter
+    [zoom<=16] { text-name: "''"; }
   }
 }
 
