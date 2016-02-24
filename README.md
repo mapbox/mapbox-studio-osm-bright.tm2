@@ -1,6 +1,6 @@
 # OSM Bright for Kartotherian
 
-A fork of Mapbox's style of the same name, intended for [Kartotherian](https://github.com/kartotherian). This style relies on the [osm-bright.tm2source](https://github.com/kartotherian/osm-bright.tm2) datasource. Vanilla Mapbox vector tiles are not fully supported.
+A fork of Mapbox's style of the same name, intended for [Kartotherian](https://github.com/kartotherian). This style relies on the [osm-bright.tm2source](https://github.com/kartotherian/osm-bright.tm2source) datasource. Vanilla Mapbox vector tiles are not fully supported.
 
 # Viewing/Editing this style
 
