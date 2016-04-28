@@ -20,7 +20,7 @@ layers: null
 maxzoom: 18
 minzoom: 0
 name: OSM Bright 2
-source: "https://maps.wikimedia.org/osm/pbfinfo.json"
+source: "https://maps.wikimedia.org/osm-pbf/info.json"
 styles: 
   - style.mss
   - road.mss
