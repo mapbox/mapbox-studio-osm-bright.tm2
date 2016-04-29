@@ -31,6 +31,8 @@ If you have Postgres with OSM database on your machine, and you want to experime
 source: "tmsource:///Users/msemenik/dev/osm/osm2pgsql-osm-bright.tm2source"
 ```
 
-Install [Mapbox Studio Classic](https://www.mapbox.com/mapbox-studio-classic/) (version 0.3.7 or later), click "Styles & Sources" in the bottom left, browse to the style dir.
+Install [Mapbox Studio Classic](https://www.mapbox.com/mapbox-studio-classic/) (version 0.3.4 only!)
+ **ATTENTION**: versions 0.3.5 - 0.3.7 are broken, and will not display correct colors. To get an older version, right click on the download link, copy it, and change the version to 0.3.4.
 
-**Remember that style changes only show after you click "Save".**
+* click "Styles & Sources" in the bottom left, browse to the style dir, make changes to the carto-css, and SAVE!
+ **Remember that style changes only show after you click "Save".**
