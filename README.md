@@ -7,7 +7,7 @@ A fork of Mapbox's style of the same name, intended for [Kartotherian](https://g
 ## Simple approach
 * Download and unzip [osm-bright.tm2](https://github.com/kartotherian/osm-bright.tm2/archive/master.zip)
 * create `node_modules/osm-bright-fonts` subdirectory
-* Download and unzip [osm-bright.fonts](https://github.com/kartotherian/osm-bright.fonts/archive/master.zip) to the `osm-bright-fonts` subdir
+* Download and unzip [osm-bright.fonts](https://github.com/kartotherian/osm-bright.fonts/archive/master.zip) to the `node_modules/osm-bright-fonts` subdir
 
 Install [Mapbox Studio Classic](https://www.mapbox.com/mapbox-studio-classic/) (version 0.3.4 only!)
  **ATTENTION**: versions 0.3.5 - 0.3.7 are broken, and will not display correct colors. To get an older version, right click on the download link, copy it, and change the version to 0.3.4.
