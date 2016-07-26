@@ -186,7 +186,7 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 10;
-  [type='city'][zoom>=8][zoom<=15] {
+  [type='city'] {
   	text-face-name: @sans_md;
     text-size: 16;
     [zoom>=10] { 
