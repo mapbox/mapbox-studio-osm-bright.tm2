@@ -40,10 +40,9 @@
 // The country labels in MapBox Streets vector tiles are placed by hand,
 // optimizing the arrangement to fit as many as possible in densely-
 // labeled areas.
-#country_label[zoom>=2][zoom<=10] {
+#country_label[zoom>=3][zoom<=10] {
   text-name: @name;
   text-face-name: @bold;
-  [zoom=2] { text-face-name: @sans; }
   text-placement: point;
   text-size: 9;
   text-fill: @country_text;
@@ -60,14 +59,14 @@
     [zoom>=6] { text-size: 20; text-wrap-width: 120; }
   }
   [scalerank=2] {
-    [zoom=2]  { text-name: [code]; }
+    [zoom=2]  { text-size: 10; }
     [zoom=3]  { text-size: 11; }
     [zoom=4]  { text-size: 13; }
     [zoom=5]  { text-size: 17; }
     [zoom>=6] { text-size: 20; }
   }
   [scalerank=3] {
-    [zoom=3]  { text-name: [code]; }
+    [zoom=3]  { text-size: 10 }
     [zoom=4]  { text-size: 11; }
     [zoom=5]  { text-size: 15; }
     [zoom=6]  { text-size: 17; }
@@ -89,6 +88,7 @@
     [zoom>=9] { text-size: 18; text-wrap-width: 120; }
   }
   [scalerank>=6] {
+    [zoom=3] { text-name: '[code]'; }
     [zoom=7] { text-size: 12; }
     [zoom=8] { text-size: 14; }
     [zoom>=9] { text-size: 16; }
