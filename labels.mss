@@ -8,13 +8,7 @@
 // ---------------------------------------------------------------------
 // Languages
 
-// There are 5 language options in the MapBox Streets vector tiles:
-// - Local/default: '[name]'
-// - English: '[name_en]'
-// - French: '[name_fr]'
-// - Spanish: '[name_es]'
-// - German: '[name_de]'
-@name: '[name_en]';
+@name: '[name]';
 
 // ---------------------------------------------------------------------
 // Fonts
