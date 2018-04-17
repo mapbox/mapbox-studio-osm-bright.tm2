@@ -12,6 +12,6 @@
     "access": "public"
   },
   "dependencies": {
-    "osm-bright-fonts": "git+https://github.com/kartotherian/osm-bright.fonts.git#v1.0.3"
+    "osm-bright-fonts": "git+https://github.com/kartotherian/osm-bright.fonts.git#v1.0.5"
   }
 }
